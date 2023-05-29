@@ -19,9 +19,8 @@ const Navbar = (props) => {
   const { sectionTwoRef } = props;
   useEffect(() => {
     const handleScroll = () => {
-      const section2 = document.getElementById("second-section");
       const section2Offset =
-        1.1 * sectionTwoRef.current.getBoundingClientRect().height;
+         sectionTwoRef.current.getBoundingClientRect().height;
       const currentScrollPos = window.scrollY;
       console.log(currentScrollPos, "offset is", section2Offset);
       if (currentScrollPos >= section2Offset) {
